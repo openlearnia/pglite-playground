@@ -1,20 +1,19 @@
-# PGLite Playground
+# PGLite Playground (deprecated)
 
-Interactive SQL playground shell for Openlearnia with Schema Builder integration.
+This tool has been **merged into [Database Lab](../schema-builder/)** (`projects/tools/schema-builder`).
 
-## Quick start
+Database Lab combines the visual schema builder and PGLite SQL playground in a single app:
+
+- **Schema** tab — drag-and-drop diagram editor
+- **SQL** tab — query editor with results
+- **Data** tab — table browser
+
+## Use Database Lab instead
 
 ```bash
+cd ../schema-builder
 npm install
 npm run dev
 ```
 
-## Integration Notes
-
-- The `Schema Builder` tab loads the standalone schema builder UI in an iframe.
-- Playground exposes a runtime adapter on `window.__OPENLEARNIA_PGLITE_ADAPTER__`.
-- This lets the schema builder run both standalone and embedded with the same adapter contract.
-
-## Deploy
-
-Pushes to `main` deploy `dist/` to Cloudflare Pages via GitHub Actions (`.github/workflows/deploy.yml`). Required org secrets: `CF_API_TOKEN`, `CF_ACCOUNT_ID`. Pages project name is in `wrangler.toml`.
+Repository: [openlearnia/schema-builder](https://github.com/openlearnia/schema-builder)
